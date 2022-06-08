@@ -53,6 +53,14 @@
         "autor": "Ken Follett",
         "precio": 1250,
         "stock": 13,
-        "portada": "./asset/LosPilaresDeLaTierra.jpg"
+        "portada": "./assets/LosPilaresDeLaTierra.jpg"
+    },
+    {
+        "id": 8,
+        "titulo": "Heartstopper",
+        "autor": "Alice Oseman",
+        "precio": 830,
+        "stock": 6,
+        "portada": "./assets/Heartstopper.jpg"
     }
 ]

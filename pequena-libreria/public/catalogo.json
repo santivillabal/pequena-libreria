@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "titulo": "El odio que das",
+        "autor": "Angie Thomas",
+        "precio": 690,
+        "stock": 2,
+        "portada": "./assets/ElOdioQueDas.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "El imperio final",
+        "autor": "Brandon Sanderson",
+        "precio": 590,
+        "stock": 15,
+        "portada": "./assets/ElImperioFinal.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "American gods",
+        "autor": "Neil Gaiman",
+        "precio": 600,
+        "stock": 13,
+        "portada": "./assets/AmericanGods.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Máquinas mortales",
+        "autor": "Philip Reeve",
+        "precio": 520,
+        "stock": 8,
+        "portada": "./assets/MaquinasMortales.png"
+    },
+    {
+        "id": 5,
+        "titulo": "El marciano",
+        "autor": "Andy Weir",
+        "precio": 870,
+        "stock": 20,
+        "portada": "./assets/ElMarciano.jpg"
+    },
+    {
+        "id": 6,
+        "titulo": "Temporada de huracanes",
+        "autor": "Fernanda Melchor",
+        "precio": 990,
+        "stock": 5,
+        "portada": "./assets/TemporadaDeHuracanes.jpg"
+    },
+    {
+        "id": 7,
+        "titulo": "Los pilares de la tierra",
+        "autor": "Ken Follett",
+        "precio": 1250,
+        "stock": 13,
+        "portada": "./asset/LosPilaresDeLaTierra.jpg"
+    }
+]

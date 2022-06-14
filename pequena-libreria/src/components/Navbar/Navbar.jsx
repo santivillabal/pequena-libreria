@@ -1,18 +1,19 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 function Navbar(){
     return <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
-      <a className="navbar-brand" href="..../public/index.html">La pequeña librería</a>
+      <Link className="navbar-brand" to="/Home">La pequeña librería</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <a className="nav-link active" aria-current="page" href="..../public/index.html">Inicio</a>
-          <a className="nav-link" href="..../public/index.html">Novedades</a>
-          <a className="nav-link" href="..../public/index.html">Categorías</a>
+          <Link className="nav-link active" aria-current="page" to="/Home">Inicio</Link>
+          <Link className="nav-link" to="/Novedades">Novedades</Link>
+          <Link className="nav-link" to="Categorias">Categorías</Link>
           <CartWidget />
         </div>
       </div>

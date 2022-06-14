@@ -1,18 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-export default function Item({libro}) {
+export default function ItemDetail({libro}) {
     const {titulo, autor, precio, portada} = libro
 
     return (
       <>
-        <div className="card catalogo-card">
-            <img src={portada} className="portada" alt="Portada de libro" />
+        <div className="item-detail-card">
+            <div>
+                <img src={portada} className="portada" alt="Portada de libro" />
+            </div>
             <div className="card-body card-body-cont">
                 <h5 className="card-title">{titulo}</h5>
                 <p className="card-text">{autor}</p>
                 <p className="card-text">${precio}</p>
-                <Link to="/Producto" className="btn btn-ver-mas">Ver más</Link>
+                <a href="#" className="btn">Agregar al carrito</a>
             </div>
         </div>
     </>)

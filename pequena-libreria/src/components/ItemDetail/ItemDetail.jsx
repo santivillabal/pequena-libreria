@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function ItemDetail({libro}) {
 
     return (
@@ -13,7 +12,7 @@ export default function ItemDetail({libro}) {
                 <h5 className="card-title">{libro.titulo}</h5>
                 <p className="card-text">{libro.autor}</p>
                 <p className="card-text">${libro.precio}</p>
-                <a href=" " className="btn">Agregar al carrito</a>
+                <a href="#" className="btn">Agregar al carrito</a>
             </div>
         </div>
     </>)

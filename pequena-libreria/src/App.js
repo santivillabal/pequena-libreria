@@ -7,7 +7,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from  "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import ItemDetail from "./components/ItemDetail/ItemDetail";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
 function App() {
@@ -23,14 +23,16 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/category/:id" element={<ItemListContainer />} />
+                <Route path="/item:id" element={<ItemDetailContainer />} />
               </Routes>
             <Footer />
 
           </BrowserRouter>
 
             <ItemCounter  stock={20} inicial={1} onAdd={onAdd} />
-            <ItemDetailContainer />
-            <ItemDetail />
+
+
           </>
   );
 }

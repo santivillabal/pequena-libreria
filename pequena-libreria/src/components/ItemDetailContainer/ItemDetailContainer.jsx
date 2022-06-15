@@ -1,27 +1,47 @@
 import React, { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
 
+import catalogo from "../../catalogo.json";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
 
 
     const [libros, setLibros] = useState([])
+    const [libroBuscado, setLibroBuscado] = useState();
+    const [loader, setLoader] = useState(true);
 
 
     useEffect(() => {
-        fetch('./catalogo.json')
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
+        const productos = new Promise((resolve, reject) => {
+            resolve(catalogo);
+        }
+        );
+        productos.then(data => {
             setLibros(data);
-        })
-        .catch(error => {
+        }
+        ).catch(error => {
             console.log("Error:" + error);
-        });
-    }, [ ]);
-    return(
-        <ItemDetail libro={libros} />
+        }
+        );
+    }, []);
+
+    useEffect(() => {
+        const seleccion = 2;
+        if (libros.length > 0) {
+            const select = libros.find(libro => libro.id == seleccion);
+            setLibroBuscado(select);
+            setLoader(false);
+        }
+    }, [libros]);
+    console.log(libroBuscado)
+    console.log(libros)
+    return (
+        <>{
+            loader ? <div>Cargando...</div> :
+                <ItemDetail libro={libroBuscado} />
+        }
+
+        </>
     )
 
 }

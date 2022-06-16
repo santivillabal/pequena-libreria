@@ -1,19 +1,30 @@
 import React from 'react'
+import ItemCounter from '../ItemCounter/ItemCounter'
 
 export default function ItemDetail({libro}) {
+    const {titulo, autor, precio, portada, sinopsis, stock} = libro
+    const onAdd = (x) =>{
+        alert(`${x} productos agregados al carrito.`)
+      }
 
     return (
       <>
-        <div className="item-detail-card">
-            <div>
-                <img src={libro.portada} className="portada" alt="Portada de libro" />
+        <div className="detailContainer">
+                <div className="detailImgContainer">
+                    <img src={portada} className="cover" alt="Portada de libro" />
+                </div>
+                <div className="card-body">
+                    <div className="productFeatures">
+                        <h5 className="detailTitle">{titulo}</h5>
+                        <p className="detailAuthor">{autor}</p>
+                        <p className="detailPrice">${precio}</p>               
+                    </div>
+                    <div className="productDescription">{sinopsis}</div>
+                    <div className="productPurchase">
+                        <ItemCounter stock={stock} inicial={1} onAdd={onAdd} />
+                    </div>
+
+                </div>
             </div>
-            <div className="card-body card-body-cont">
-                <h5 className="card-title">{libro.titulo}</h5>
-                <p className="card-text">{libro.autor}</p>
-                <p className="card-text">${libro.precio}</p>
-                <a href="#" className="btn">Agregar al carrito</a>
-            </div>
-        </div>
     </>)
 }

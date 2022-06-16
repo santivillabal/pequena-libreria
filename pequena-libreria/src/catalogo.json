@@ -3,64 +3,80 @@
         "id": 1,
         "titulo": "El odio que das",
         "autor": "Angie Thomas",
+        "categoria": "juvenil",
         "precio": 690,
-        "stock": 2,
-        "portada": "./assets/ElOdioQueDas.jpg"
+        "stock": 16,
+        "portada": "/assets/ElOdioQueDas.jpg",
+        "sinopsis": "Starr es una chica de dieciséis años de edad que viven entre dos mundos: un barrio pobre de gente negra donde nació, y su instituto situado en un elegante barrio residencial blanco. El difícil equilibrio entre ambos se hace añicos cuando ella se convierte en testigo de la muerte a tiros de su mejor amigo, Khalil, a manos de un policía. A partir de ese momento, todo lo que Starr diga acerca de la aterradora noche que cambió su vida podrá ser usado de excusa por uno y como armas por otros.\nY lo peor de todo es que ambos bandos esperan que dé un paso en falso para poner fin a su vida."
     },
     {
         "id": 2,
         "titulo": "El imperio final",
         "autor": "Brandon Sanderson",
+        "categoria": "fantasia",
         "precio": 590,
         "stock": 15,
-        "portada": "./assets/ElImperioFinal.jpg"
+        "portada": "/assets/ElImperioFinal.jpg",
+        "sinopsis": "Durante mil años han caído cenizas del cielo. Durante mil años nada ha florecido. Durante mil años los skaa han sido esclavizados y viven en la miseria, sumidos en un miedo inevitable. Durante mil años el Lord Legislador ha reinado con poder absoluto, dominando gracias al terror, a sus poderes y a su inmortalidad, ayudado por «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia.\nPero los nobles a menudo han tenido trato sexual con jóvenes skaa y, aunque la ley lo prohíbe, algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» (mistborn).\nAhora, Kelsier, el «superviviente», el único que ha logrado huir de los Pozos de Hathsin, ha encontrado a Vin, una pobre chica skaa con mucha suerte... Tal vez los dos, con el mejor equipo criminal jamás reunido, unidos a la rebelión que los skaa intentan desde hace mil años, logren cambiar el mundo y acabar con la atroz mano de hierro del Lord Legislador.\nPero, ¿qué pasa si el héroe de la profecía falla?"
     },
     {
         "id": 3,
         "titulo": "American gods",
         "autor": "Neil Gaiman",
+        "categoria": "fantasia",
         "precio": 600,
         "stock": 13,
-        "portada": "./assets/AmericanGods.jpg"
+        "portada": "/assets/AmericanGods.jpg",
+        "sinopsis": "Días antes de salir de prisión, la mujer de Sombra, Laura, muere en un misterioso accidente de coche. Aturdido por el dolor, emprende el regreso a casa. En el avión, se encontrará con el enigmático señor Miércoles, que dice ser un refugiado de una guerra antigua, un dios y también el rey de América.\nJuntos se embarcan en un viaje extraño a través de los Estados Unidos, mientras una tormenta de dimensiones épicas amenaza con desencadenarse.\nPoco a poco descubriremos que Miércoles es una encarnación de Odín y que está reclutando viejos dioses, cuyos poderes han disminuido por el tiempo y la falta de creyentes, para participar en una guerra contra los nuevos dioses: aquellos que conforman la tecnología moderna."
     },
     {
         "id": 4,
         "titulo": "Máquinas mortales",
         "autor": "Philip Reeve",
+        "categoria": "juvenil",
         "precio": 520,
         "stock": 8,
-        "portada": "./assets/MaquinasMortales.png"
+        "portada": "/assets/MaquinasMortales.png",
+        "sinopsis": "Londres está en movimiento. Su presa podrías ser tú...\nLondres es una ciudad sobre ruedas: una ciudad como nunca habías visto. Tras la terrible Guerra de los Sesenta Minutos, las ciudades que sobrevivieron al apocalipsis se convirtieron en depredadoras, persiguiendo a ciudades menores y alimentándose de ellas.\nLondres es una de ellas y se encuentra a la caza de una pequeña urbe, cuando Tom se topa con una joven asesina. Ambos acabarán en la Región Exterior, un páramo desolador marcado por las huellas de las ciudades ambulantes. Este es el comienzo de una gran aventura para estos dos chicos, que tendrán que aliarse para poder sobrevivir."
     },
     {
         "id": 5,
         "titulo": "El marciano",
         "autor": "Andy Weir",
+        "categoria": "cienciaficcion",
         "precio": 870,
         "stock": 20,
-        "portada": "./assets/ElMarciano.jpg"
+        "portada": "/assets/ElMarciano.jpg",
+        "sinopsis": "Seis días atrás el astronauta Mark Watney se convirtió en uno de los primeros hombres en caminar por la superficie de Marte. Ahora está seguro de que será el primer hombre en morir allí. La tripulación de la nave en que viajaba se ve obligada a evacuar el planeta a causa de una tormenta de polvo, dejando atrás a Mark tras darlo por muerto. Pero él está vivo, y atrapado a millones de kilómetros de cualquier ser humano, sin posibilidad de enviar señales a la Tierra. De todos modos, si lograra establecer conexión, moriría mucho antes de que el rescate llegara.\nSin embargo, Mark no se da por vencido; armado con su ingenio, sus habilidades y sus conocimientos sobre botánica, se enfrentará a obstáculos aparentemente insuperables. Por suerte, el sentido del humor resultará ser su mayor fuente de fuerza. Obstinado en seguir con vida, incubará un plan absolutamente demencial para ponerse en contacto con la NASA."
     },
     {
         "id": 6,
         "titulo": "Temporada de huracanes",
         "autor": "Fernanda Melchor",
+        "categoria": "latinoamericana",
         "precio": 990,
         "stock": 5,
-        "portada": "./assets/TemporadaDeHuracanes.jpg"
+        "portada": "/assets/TemporadaDeHuracanes.jpg",
+        "sinopsis": "Un grupo de niños encuentra un cadáver flotando en las aguas turbias de un canal de riego cercano a la ranchería de La Matosa. El cuerpo resulta ser de la Bruja, una mujer que heredó dicho oficio de su madre fallecida, y a quienes los pobladores de esa zona rural respetaban y temían.\nTras el macabro hallazgo, las sospechas y habladurías recaerán sobre un grupo de muchachos del pueblo, a quienes días antes una vecina vio mientras huían de casa de la hechicera, cargando lo que parecía ser un cuerpo inerte.\nA partir de ahí, los personajes involucrados en el crimen nos contarán su historia mientras los lectores nos sumergimos en la vida de este lugar acosado por la miseria y el abandono, y donde convergen la violencia del erotismo más oscuro y las sórdidas relaciones de poder."
     },
     {
         "id": 7,
         "titulo": "Los pilares de la tierra",
         "autor": "Ken Follett",
+        "categoria": "novelahistorica",
         "precio": 1250,
         "stock": 13,
-        "portada": "./assets/LosPilaresDeLaTierra.jpg"
+        "portada": "/assets/LosPilaresDeLaTierra.jpg",
+        "sinopsis": "El gran maestro de la narrativa de acción y suspense nos transporta a la Edad Media, a un fascinante mundo de reyes, damas, caballeros, pugnas feudales, castillos y ciudades amuralladas. El amor y la muerte se entrecruzan vibrantemente en este magistral tapiz cuyo centro es la construcción de una catedral gótica. La historia se inicia con el ahorcamiento público de un inocente y finaliza con la humillación de un rey."
     },
     {
         "id": 8,
         "titulo": "Heartstopper",
         "autor": "Alice Oseman",
+        "categoria": "comic",
         "precio": 830,
         "stock": 6,
-        "portada": "./assets/Heartstopper.jpg"
+        "portada": "/assets/Heartstopper.jpg",
+        "sinopsis": "Dos chicos se conocen. Se hacen amigos. Se enamoran. ¿Por quénos empeñamos en hacer complicadas las emociones más sencillas?\nEsta historia de amor entre dos chicos, uno de ellos declaradamente homosexual y el otro en vías de autodescubrimiento, nos recordaráque hay primeros amores frágiles como el cristal y memorables como el diamante. Con los titubeos propios de cualquier amor adolescente,Heartstopper responde a la manera de sentir de los jóvenes reales, con una visión abierta, natural y sensible sobre el amor y la identidad sexual, sin perder nunca la delicadeza y la emoción."
     }
 ]

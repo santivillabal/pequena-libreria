@@ -1,0 +1,45 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+
+  .detailContainer{
+    width: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.detailImgContainer{
+    display: grid;
+    justify-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.cover{
+    height: 25rem;
+}
+.productDescription{
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.detailTitle{
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.detailAuthor{
+    font-size: 1.5rem;
+}
+.detailPrice{
+    font-family: serif;
+    font-size: 2rem;
+}
+.productPurchase{
+    margin-top: 2rem;
+}

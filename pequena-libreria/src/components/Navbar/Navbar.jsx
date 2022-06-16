@@ -13,7 +13,17 @@ function Navbar(){
         <div className="navbar-nav">
           <Link className="nav-link active" aria-current="page" to="/Home">Inicio</Link>
           <Link className="nav-link" to="/Novedades">Novedades</Link>
-          <Link className="nav-link" to="Categorias">Categorías</Link>
+          <div className="dropdown">
+            <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><Link className="dropdown-item" to="/category/cienciaficcion">Ciencia ficción</Link></li>
+              <li><Link className="dropdown-item" to="/category/comic">Comic</Link></li>
+              <li><Link className="dropdown-item" to="/category/fantasia">Fantasía</Link></li>
+              <li><Link className="dropdown-item" to="/category/juvenil">Juvenil</Link></li>
+              <li><Link className="dropdown-item" to="/category/latinoamericana">Latinoamericana</Link></li>
+              <li><Link className="dropdown-item" to="/category/novelahistorica">Novela histórica</Link></li>
+            </ul>
+          </div>
           <CartWidget />
         </div>
       </div>

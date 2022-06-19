@@ -3,6 +3,11 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 function Navbar(){
+
+    const categorias = ["Ciencia ficción", "Comic", "Fantasía", "Juvenil", "Latinoamericana", "Novela histórica"]
+
+
+
     return <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
       <Link className="navbar-brand" to="/Home">La pequeña librería</Link>
@@ -16,12 +21,8 @@ function Navbar(){
           <div className="dropdown">
             <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><Link className="dropdown-item" to="/category/cienciaficcion">Ciencia ficción</Link></li>
-              <li><Link className="dropdown-item" to="/category/comic">Comic</Link></li>
-              <li><Link className="dropdown-item" to="/category/fantasia">Fantasía</Link></li>
-              <li><Link className="dropdown-item" to="/category/juvenil">Juvenil</Link></li>
-              <li><Link className="dropdown-item" to="/category/latinoamericana">Latinoamericana</Link></li>
-              <li><Link className="dropdown-item" to="/category/novelahistorica">Novela histórica</Link></li>
+              {categorias.map(categoria =>(
+              <li key={categoria}><Link className="dropdown-item" to={`/category/${categoria}`}>{categoria}</Link></li>))}
             </ul>
           </div>
           <CartWidget />

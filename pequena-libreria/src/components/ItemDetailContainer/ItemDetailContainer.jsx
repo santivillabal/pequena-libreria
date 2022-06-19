@@ -6,7 +6,6 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
-    console.log(id)
     const [libros, setLibros] = useState([])
     const [libroBuscado, setLibroBuscado] = useState();
     const [loader, setLoader] = useState(true);
@@ -31,11 +30,9 @@ const ItemDetailContainer = () => {
             const select = libros.find(libro => libro.id == id);
             setLibroBuscado(select);
             setLoader(false);
-            console.log(select)
         }
     }, [libros]);
-    console.log(libroBuscado)
-    console.log(libros)
+
 
 
     return (

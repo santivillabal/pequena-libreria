@@ -3,6 +3,7 @@ import ItemCounter from '../ItemCounter/ItemCounter'
 
 export default function ItemDetail({libro}) {
     const {titulo, autor, precio, portada, sinopsis, stock} = libro
+    
     const onAdd = (x) =>{
         alert(`${x} productos agregados al carrito.`)
       }

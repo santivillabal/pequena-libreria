@@ -3,10 +3,6 @@ import ItemCounter from '../ItemCounter/ItemCounter'
 
 export default function ItemDetail({libro}) {
     const {titulo, autor, precio, portada, sinopsis, stock} = libro
-    
-    const onAdd = (x) =>{
-        alert(`${x} productos agregados al carrito.`)
-      }
 
     return (
       <>
@@ -22,7 +18,7 @@ export default function ItemDetail({libro}) {
                     </div>
                     <div className="productDescription">{sinopsis}</div>
                     <div className="productPurchase">
-                        <ItemCounter stock={stock} inicial={1} onAdd={onAdd} />
+                        <ItemCounter stock={stock} inicial={1} />
                     </div>
 
                 </div>

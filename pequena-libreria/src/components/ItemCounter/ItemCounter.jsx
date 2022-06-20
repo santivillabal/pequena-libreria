@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ItemCounter({inicial, stock, onAdd}){
+export default function ItemCounter({inicial, stock}){
 
     const [x, setX] = useState(inicial);
     const suma = () =>{
@@ -16,6 +16,11 @@ export default function ItemCounter({inicial, stock, onAdd}){
         }
         else {alert("No se pueden quitar más productos.")}
     }
+    const [mostrar, setMostrar] = useState(true);
+    const onAdd = () =>{
+        setMostrar(!mostrar)
+    }
+
 
 
     return (
@@ -25,8 +30,7 @@ export default function ItemCounter({inicial, stock, onAdd}){
             {x}
             <button className='btn' onClick={suma}> + </button>
         </div>
-        <Link to="/cart" className="btn">Agregar al carrito</Link>
-        {/* <button className='btn btnOnAdd' onClick={() => onAdd(x)}>Agregar al carrito</button> */}
+        {mostrar ? (<button className='btn btnOnAdd' onClick={() => onAdd()}>Agregar producto</button>) : <Link to="/cart" className="btn">Ir al carrito</Link>}
         </>
-        )
+    )
 }

@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import catalogo from "../../catalogo.json";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import {MiContexto} from "../Context/CartContext";
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
-    const [libros, setLibros] = useState([])
+    const {libros} = useContext(MiContexto)
+    const {setLibros} = useContext(MiContexto)
     const [libroBuscado, setLibroBuscado] = useState();
     const [loader, setLoader] = useState(true);
 
-
-    useEffect(() => {
-        const productos = new Promise((resolve, reject) => {
-            resolve(catalogo);
-        }
-        );
-        productos.then(data => {
-            setLibros(data);
-        }
-        ).catch(error => {
-            console.log("Error:" + error);
-        }
-        );
-    }, []);
 
     useEffect(() => {
         if (libros.length > 0) {

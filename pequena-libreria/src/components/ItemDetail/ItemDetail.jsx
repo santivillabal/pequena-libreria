@@ -18,7 +18,7 @@ export default function ItemDetail({libro}) {
                     </div>
                     <div className="productDescription">{sinopsis}</div>
                     <div className="productPurchase">
-                        <ItemCounter stock={stock} inicial={1} />
+                        <ItemCounter stock={stock} libro={libro} />
                     </div>
 
                 </div>

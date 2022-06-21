@@ -9,12 +9,14 @@ import { BrowserRouter, Routes, Route } from  "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CategoryContainer from "./components/CategoryContainer/CategoryContainer";
 import Cart from "./components/Cart/Cart";
+import CartContext from "./components/Context/CartContext";
 
 
 function App() {
 
   return (
           <>
+          <CartContext>
           <BrowserRouter>
             <Navbar />
               <Routes>
@@ -27,7 +29,7 @@ function App() {
             <Footer />
 
           </BrowserRouter>
-
+          </CartContext>
           </>
   );
 }

@@ -1,30 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ItemList from "../ItemList/ItemList";
-import catalogo from "../../catalogo.json";
+import { MiContexto } from "../Context/CartContext";
 
 const ItemListContainer = () => {
+    const {libros} = useContext(MiContexto)
 
-
-    const [libros, setLibros] = useState([])
-
-
-    useEffect(() => {
-        //pedido con promise
-        const productos = new Promise((resolve, reject) => {
-            resolve(catalogo);
-        }
-        );
-        productos.then(data => {
-            setLibros(data);
-        }
-        ).catch(error => {
-            console.log("Error:" + error);
-        }
-        );
-
-
-    }, []);
-    console.log(libros);
     return (
         <div>
             <ItemList libros={libros} />

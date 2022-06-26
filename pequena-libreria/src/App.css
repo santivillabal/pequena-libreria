@@ -61,6 +61,19 @@
   margin: 1rem;
   align-items: center;
 }
+
+.cart-cont{
+  display: inline;
+}
+
+.cart-card{
+  width: auto;
+}
+
+.portada-cart{
+  height: 3rem;
+}
+
 .card-body-cont{
   width: 15rem;
 }

@@ -7,7 +7,6 @@ const ItemDetailContainer = () => {
 
     const {id} = useParams();
     const {libros} = useContext(MiContexto)
-    const {setLibros} = useContext(MiContexto)
     const [libroBuscado, setLibroBuscado] = useState();
     const [loader, setLoader] = useState(true);
 

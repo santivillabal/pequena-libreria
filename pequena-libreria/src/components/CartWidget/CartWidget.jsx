@@ -1,10 +1,15 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { MiContexto } from "../Context/CartContext";
+
 
 function CartWidget(){
+    const {itemQty} = useContext(MiContexto)
+
     return  <Link to="/Carrito">
                 <i id="cart" className="fas fa-shopping-cart"></i>
-                <span className ="cart-quantity">0</span>
+                <span className ="cart-quantity">{itemQty}</span>
             </Link>
 }
 

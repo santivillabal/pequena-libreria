@@ -1,6 +1,6 @@
 import React, {createContext, useState, useEffect} from 'react'
 import catalogo from "../../catalogo.json";
-export const MiContexto = React.createContext({})
+export const MiContexto = createContext({})
 
 export default function CartContext({children}) {
 
@@ -23,45 +23,21 @@ export default function CartContext({children}) {
     }, []);
 
 
-// Item Counter
-
-    const [x, setX] = useState(1);
-    const resta = () =>{
-        if (x > 1){
-            setX(x - 1)
-        }
-        else {alert("No se pueden quitar más productos.")}
-    }
-    const [mostrar, setMostrar] = useState(true);
-
 
     // Cart
     
     const [carrito, setCarrito] = useState([]);
-    const [itemQty, setItemQty] = useState();
-    const [itemPrice, setItemPrice] = useState();
+
+    const isInCart = (id) => carrito.find(item => item.id === id) ? true : false;
 
     const addItem = (item, cantidad) => {
-        setMostrar(!mostrar)
-        const newItem = {...item, cantidad}
-        if (isInCart(newItem.id)) {
-            const findProduct = carrito.find(prod => prod.id === newItem.id)
-            const productIndex = carrito.indexOf(findProduct)
-            const auxcart = [...carrito]
-            auxcart[productIndex].cantidad += cantidad
-            setCarrito(auxcart)
-        }else{
-            // setCarrito([...carrito], newItem)
-            setCarrito([carrito.push(newItem)])
-            console.log(carrito)
+
+        if (isInCart(item.id)) {
+            setCarrito(carrito.map(prod => prod.id === item.id ? { ...prod, cantidad: prod.cantidad + cantidad } : prod))
         }
-        setItemQty(carrito.reduce((acc, x) => acc += x.cantidad, 0))
-        setItemPrice(carrito.reduce((acc, x) => acc += x.cantidad * x.precio, 0))
-
-    }
-
-    const isInCart = (id) => {
-        return carrito.some(prod => prod.id === id)
+        else {
+            setCarrito([...carrito, { ...item, cantidad }])
+        }
     }
 
     const deleteItem = (id) => {
@@ -72,10 +48,16 @@ export default function CartContext({children}) {
         setCarrito([])
     }
 
+    const itemQty = () => {
+        return carrito.reduce((acc, x) => acc += x.cantidad, 0)
+    }
 
+    const itemPrice = () => {
+        return carrito.reduce((acc, x) => acc += x.cantidad * x.precio, 0)
+    }
 
     return (
-    <MiContexto.Provider value={{libros, setLibros, mostrar, x, setX, resta, addItem, isInCart, deleteItem, itemPrice, itemQty, carrito, setCarrito, clear}}>
+    <MiContexto.Provider value={{ libros, setLibros, addItem, deleteItem, itemPrice, itemQty, carrito, setCarrito, clear }}>
         {children}
     </MiContexto.Provider>
   )

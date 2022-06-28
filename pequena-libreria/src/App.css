@@ -62,8 +62,17 @@
   align-items: center;
 }
 
+.cart-container{
+  margin: 5rem;
+}
+
 .cart-cont{
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 5rem;
+  margin-bottom: 2rem;
+  align-items: center;
 }
 
 .cart-card{
@@ -71,7 +80,7 @@
 }
 
 .portada-cart{
-  height: 3rem;
+  height: 5rem;
 }
 
 .card-body-cont{

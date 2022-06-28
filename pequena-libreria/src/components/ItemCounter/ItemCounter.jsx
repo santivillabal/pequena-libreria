@@ -1,14 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MiContexto } from '../Context/CartContext';
 
-export default function ItemCounter({stock, libro}){
+export default function ItemCounter({stock, mostrar, onAdd, inicio, libro}){
 
-    const {x, setX, resta, addItem, isInCart, mostrar} = useContext(MiContexto)
-    const onAdd = () => {
-        addItem(libro, x)
-        isInCart(libro.id)
-    }
+    const [x, setX] = useState(parseInt(inicio))
 
     const suma = () =>{
         if (x < stock){
@@ -17,7 +12,17 @@ export default function ItemCounter({stock, libro}){
         else {alert("No hay suficiente stock de este producto.")}
     }
 
+    const resta = () =>{
+        if (x > 1){
+            setX(x - 1)
+        }
+        else {alert("No se pueden quitar más productos.")}
+    }
 
+    useEffect(() => {
+        setX(parseInt(inicio))
+    }
+        , [inicio])
 
     return (
         <>
@@ -28,9 +33,12 @@ export default function ItemCounter({stock, libro}){
                     {x}
                     <button className='btn' onClick={suma}> + </button>
                 </div>
-                <button className='btn btnOnAdd' onClick={() => {onAdd()}}>Agregar producto</button>
+                <button className='btn btnOnAdd' onClick={() => {onAdd(x)}}>Agregar producto</button>
             </>
-            : <Link to="/cart" className="btn">Ir al carrito</Link>
+            : <div className='cont'>
+                <Link to="/home" className="btn">Seguir comprando</Link>
+                <Link to="/cart" className="btn">Ir al carrito</Link>
+              </div>
             }
         </>
     )

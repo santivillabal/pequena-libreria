@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
+import { MiContexto } from '../Context/CartContext'
 import ItemCounter from '../ItemCounter/ItemCounter'
 
-export default function ItemDetail({libro}) {
-    const {titulo, autor, precio, portada, sinopsis, stock} = libro
+export default function ItemDetail({ libro }) {
+    const { titulo, autor, precio, portada, sinopsis, stock } = libro
+
+    const [mostrar, setMostrar] = useState(true);
+    const {addItem} = useContext(MiContexto)
+
+    const onAdd = (quantity) => {
+        setMostrar(false)
+        addItem(libro, quantity)
+    }
 
     return (
       <>
@@ -18,7 +27,7 @@ export default function ItemDetail({libro}) {
                     </div>
                     <div className="productDescription">{sinopsis}</div>
                     <div className="productPurchase">
-                        <ItemCounter stock={stock} libro={libro} />
+                        <ItemCounter stock={stock} inicio={1} mostrar={mostrar} onAdd={onAdd} libro={libro} />
                     </div>
 
                 </div>

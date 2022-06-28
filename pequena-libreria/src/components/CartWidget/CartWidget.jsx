@@ -7,9 +7,9 @@ import { MiContexto } from "../Context/CartContext";
 function CartWidget(){
     const {itemQty} = useContext(MiContexto)
 
-    return  <Link to="/Carrito">
+    return  <Link to="/cart">
                 <i id="cart" className="fas fa-shopping-cart"></i>
-                <span className ="cart-quantity">{itemQty}</span>
+                <span className="cart-quantity">{itemQty() > 0 ? itemQty() : ""}</span>
             </Link>
 }
 

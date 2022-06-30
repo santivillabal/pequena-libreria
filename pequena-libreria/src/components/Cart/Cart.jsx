@@ -18,6 +18,7 @@ export default function Cart() {
         <div className='cart-container'>
             { carrito.map(libro => (<CartList key={libro.id} libro={libro} />)) }
             <h1>Total: ${itemPrice()}</h1>
+            <Link to="/checkout" className="btn">Terminar mi compra</Link>
         </div>
       }
     </>

@@ -25,7 +25,9 @@ function Navbar(){
               <li key={categoria}><Link className="dropdown-item" to={`/category/${categoria}`}>{categoria}</Link></li>))}
             </ul>
           </div>
-          <CartWidget />
+          <div className="cartWidget">
+            <CartWidget />
+          </div>
         </div>
       </div>
     </div>

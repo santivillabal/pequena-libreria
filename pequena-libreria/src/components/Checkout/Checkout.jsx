@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { MiContexto } from '../Context/CartContext';
 import swal from 'sweetalert';
+import {addDoc, collection, getFirestore} from 'firebase/firestore';
 
 export default function Checkout() {
 
@@ -9,6 +10,8 @@ export default function Checkout() {
   const [email, setEmail] = useState("");
   const [regalo, setRegalo] = useState(false)
   const {carrito, itemPrice, clear} = useContext(MiContexto)
+  const db = getFirestore()
+  const orderCollection = collection(db, 'orden')
   console.log(itemPrice())
 
   function handleClick(e) {
@@ -22,7 +25,9 @@ export default function Checkout() {
       total: itemPrice(),
       envolver: regalo,
     }
-    console.log(orden)
+    addDoc(orderCollection, orden).then(({id}) => {
+      console.log(id)
+    })
     
     clear()
     

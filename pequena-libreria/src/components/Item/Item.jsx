@@ -12,7 +12,7 @@ export default function Item({libro}) {
                 <h5 className="card-title">{libro.titulo}</h5>
                 <p className="card-text">{libro.autor}</p>
                 <p className="card-text">${libro.precio}</p>
-                <Link to={`/item/${libro.id}`} className="btn btn-ver-mas">Ver más</Link>
+                <Link to={`/item/${libro.id}`} className="btn"> VER MÁS </Link>
             </div>
         </div>
     </>)

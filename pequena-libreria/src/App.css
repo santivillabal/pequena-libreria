@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 * {
   margin: 0%;
   padding: 0%;
@@ -16,20 +17,23 @@
 
 .btn{
   padding: 1%;
-  font-size: large;
-  font-weight: bold;
+  font-family: 'Rubik';
+  font-size: 0.8rem;
   letter-spacing: 1px;
   background-color: turquoise;
   border-style: none;
   color: black;
   border-radius: 60px;
   margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .btn hover{
-  background-color: yellow;
-  }
+  background-color: red;
+}
+
+.categorybtn{
+  border: none;
+  background-color: none;
+}
 
 .cont{
   display: flex;
@@ -44,7 +48,7 @@
 
 
 .portada{
-  height: 15rem;
+  height: 12rem;
   object-fit: contain;
   margin: 0.5rem;
 }

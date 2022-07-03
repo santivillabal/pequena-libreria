@@ -17,9 +17,9 @@ function Navbar(){
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
           <Link className="nav-link active" aria-current="page" to="/Home">Inicio</Link>
-          <Link className="nav-link" to="/Novedades">Novedades</Link>
+          <Link className="nav-link active" to="/Novedades">Novedades</Link>
           <div className="dropdown">
-            <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</button>
+            <button type="button" className="categorybtn nav-link active" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Categorías</button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               {categorias.map(categoria =>(
               <li key={categoria}><Link className="dropdown-item" to={`/category/${categoria}`}>{categoria}</Link></li>))}

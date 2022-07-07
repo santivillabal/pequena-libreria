@@ -1,5 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react'
-import catalogo from "../../catalogo.json";
+import {collection, getFirestore, getDocs} from 'firebase/firestore'
 export const MiContexto = createContext({})
 
 export default function CartContext({children}) {
@@ -7,21 +7,18 @@ export default function CartContext({children}) {
 // Array de libros
 
     const [libros, setLibros] = useState([])
-    useEffect(() => {
-        //pedido con promise
-        const productos = new Promise((resolve, reject) => {
-            resolve(catalogo);
-        }
-        );
-        productos.then(data => {
-            setLibros(data);
-        }
-        ).catch(error => {
-            console.log("Error:" + error);
-        }
-        );
-    }, []);
+    const db = getFirestore()
+    const catalogo = collection(db, 'catálogo');
 
+    useEffect(() => {
+        getDocs(catalogo)
+        .then((snapshot) => {
+            setLibros(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        })
+        .catch(error => {
+            console.log("Error:" + error);
+        })
+    })
 
 
     // Cart

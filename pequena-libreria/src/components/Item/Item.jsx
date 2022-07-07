@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Item({libro}) {
-    // const {titulo, autor, precio, portada} = libro
 
     return (
       <>

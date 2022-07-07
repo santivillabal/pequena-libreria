@@ -27,14 +27,15 @@ export default function Checkout() {
     }
     addDoc(orderCollection, orden).then(({id}) => {
       console.log(id)
+      swal("¡Pedido confirmado!", "El código de tu orden es: " + id + ". Dentro de las próximas 24 horas nos pondremos en contacto contigo para coordinar el envío.", "success")
+      .then(function() {
+      window.location = "/Cart";
+    });
     })
     
     clear()
     
-    swal("¡Orden confirmada!", "Dentro de las próximas 24 horas nos pondremos en contacto contigo para coordinar el envío.", "success")
-    .then(function() {
-      window.location = "/Cart";
-    });
+
 
   }
 

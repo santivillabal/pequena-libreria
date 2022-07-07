@@ -4,6 +4,7 @@ import { MiContexto } from "../Context/CartContext";
 
 const ItemListContainer = () => {
     const {libros} = useContext(MiContexto)
+    console.log(libros)
 
     return (
         <div>

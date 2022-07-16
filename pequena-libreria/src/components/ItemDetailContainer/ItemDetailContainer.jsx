@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import {MiContexto} from "../Context/CartContext";
+import Loader from "../Loader/Loader";
 
 const ItemDetailContainer = () => {
 
@@ -23,8 +24,9 @@ const ItemDetailContainer = () => {
 
     return (
         <>{
-            loader ? <div>Cargando...</div> :
-                <ItemDetail libro={libroBuscado} />
+            loader ? <Loader />
+            :
+            <ItemDetail libro={libroBuscado} />
         }
 
         </>

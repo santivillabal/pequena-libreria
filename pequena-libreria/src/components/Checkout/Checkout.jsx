@@ -12,7 +12,6 @@ export default function Checkout() {
   const {carrito, itemPrice, clear} = useContext(MiContexto)
   const db = getFirestore()
   const orderCollection = collection(db, 'orden')
-  console.log(itemPrice())
 
   function handleClick(e) {
     e.preventDefault()
@@ -26,7 +25,6 @@ export default function Checkout() {
       envolver: regalo,
     }
     addDoc(orderCollection, orden).then(({id}) => {
-      console.log(id)
       swal("¡Pedido confirmado!", "El código de tu orden es: " + id + ". Dentro de las próximas 24 horas nos pondremos en contacto contigo para coordinar el envío.", "success")
       .then(function() {
       window.location = "/Cart";
@@ -41,7 +39,9 @@ export default function Checkout() {
 
   return (
     <>
+        <h3>Ingresa tus datos para terminar la compra</h3>        
         <div className='checkout-container'>
+
           <form className='input-container'>
             <input type="text" onChange={(e) => setNombre(e.target.value)} required placeholder='Nombre' />
             <br />
@@ -52,10 +52,10 @@ export default function Checkout() {
             <input type="email" onChange={(e) => setEmail(e.target.value)} required placeholder='Correo electrónico' />
             <br />
             <br />
-            <label><input type="checkbox" onChange={(e) => setRegalo(true)} />Envolver para regalo</label>
+            <label><input type="checkbox" onChange={(e) => setRegalo(true)} /> Envolver para regalo</label>
             <br />
             <br />
-            <input type="submit" className='btn' onClick={handleClick} value="Confirmar orden" />
+            <input type="submit" className='btn btn-confirmarOrden' onClick={handleClick} value="CONFIRMAR ORDEN" />
           </form>
         </div>
         

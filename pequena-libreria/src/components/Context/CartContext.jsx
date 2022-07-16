@@ -18,8 +18,8 @@ export default function CartContext({children}) {
         .catch(error => {
             console.log("Error:" + error);
         })
-    })
-
+    }, []);
+console.log('render')
 
     // Cart
     

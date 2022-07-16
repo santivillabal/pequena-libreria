@@ -36,3 +36,52 @@
 .productPurchase{
     margin-top: 2rem;
 }
+
+@media screen and (max-width: 768px){
+
+    .detailContainer{
+        width: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-top: 2rem;
+        grid-gap: 1rem;
+    }
+    .detailImgContainer{
+        display: grid;
+        justify-items: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .cover{
+        height: 20rem;
+        padding-top: 1rem;
+    }
+    .productDescription{
+        margin-top: 1rem;
+        line-height: 1;
+    }
+    .detailTitle{
+        font-size: 1.5rem;
+    }
+    .detailAuthor{
+        font-size: 1rem;
+    }
+    .detailPrice{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    .detailContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .detailImgContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 export default function ItemCounter({stock, mostrar, onAdd, inicio, libro}){
 
@@ -9,14 +10,14 @@ export default function ItemCounter({stock, mostrar, onAdd, inicio, libro}){
         if (x < stock){
             setX(x + 1)
         }
-        else {alert("No hay suficiente stock de este producto.")}
+        else {swal("No hay suficiente stock de este producto.")}
     }
 
     const resta = () =>{
         if (x > 1){
             setX(x - 1)
         }
-        else {alert("No se pueden quitar más productos.")}
+        else {swal("No se pueden quitar más productos.")}
     }
 
     useEffect(() => {
@@ -29,15 +30,17 @@ export default function ItemCounter({stock, mostrar, onAdd, inicio, libro}){
             {mostrar ?
             <>
                 <div className='cont'>
-                    <button className='btn' onClick={resta}> - </button>
+                    <div className='counter-cont'>
+                    <button className='btnmasmenos' onClick={resta}> - </button>
                     {x}
-                    <button className='btn' onClick={suma}> + </button>
+                    <button className='btnmasmenos' onClick={suma}> + </button>                        
+                    </div>
+                    <button className='btn btnOnAdd' onClick={() => {onAdd(x)}}>AGREGAR PRODUCTO</button>
                 </div>
-                <button className='btn btnOnAdd' onClick={() => {onAdd(x)}}>Agregar producto</button>
             </>
             : <div className='cont'>
-                <Link to="/home" className="btn">Seguir comprando</Link>
-                <Link to="/cart" className="btn">Ir al carrito</Link>
+                <Link to="/home" className="btn">SEGUIR COMPRANDO</Link>
+                <Link to="/cart" className="btn btn-iralcarrito">IR AL CARRITO</Link>
               </div>
             }
         </>

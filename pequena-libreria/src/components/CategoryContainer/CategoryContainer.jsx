@@ -1,44 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import CategoryList from '../CategoryList/CategoryList'
-import catalogo from "../../catalogo.json";
+import { MiContexto } from '../Context/CartContext';
 
 const CategoryContainer = () => {
   
   const {categoryId} = useParams();
-  const [libros, setLibros] = useState([])
+  const {libros} = useContext(MiContexto)
   const [categoriaSelec, setCategoriaSelec] = useState([]);
   const [loader, setLoader] = useState(true);
-
-  console.log(categoryId)
-  useEffect(() => {
-      const productos = new Promise((resolve, reject) => {
-          resolve(catalogo);
-      }
-      );
-      productos.then(data => {
-          setLibros(data);
-      }
-      ).catch(error => {
-          console.log("Error:" + error);
-      }
-      );
-  }, []);
 
   useEffect(() => {
       if (libros.length > 0) {
           const select = libros.filter(libro => libro.categoria === categoryId);
           setCategoriaSelec(select);
           setLoader(false);
-          console.log(select)
       }
   }, [categoryId, libros]);
-console.log(categoriaSelec)
 
   return (
       <>{
-          loader ? <div>Cargando...</div> :
-              <CategoryList categoria={categoriaSelec} />
+          loader ? <div className="d-flex justify-content-center align-middle"><div className="spinner-border text-secondary align-middle" role="status"><span className="visually-hidden">Cargando...</span></div></div>
+          :
+          <CategoryList categoria={categoriaSelec} />
       }
 
       </>

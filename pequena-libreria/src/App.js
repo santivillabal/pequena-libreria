@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import './components/ItemDetail/itemDetail.css';
 import './components/Footer/footer.css';
+import './components/Loader/loader.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';

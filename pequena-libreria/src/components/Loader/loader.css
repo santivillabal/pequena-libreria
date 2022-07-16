@@ -1,0 +1,8 @@
+.loader{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.loader img {
+    margin-top: 5rem;
+}

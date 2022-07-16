@@ -4,7 +4,6 @@ import { MiContexto } from '../Context/CartContext'
 
 export default function CartList(libro) {
   const { deleteItem } = useContext(MiContexto)
-  console.log(libro.libro.id)
 
   return (
     <>
@@ -13,7 +12,7 @@ export default function CartList(libro) {
             <h5 className="card-title">{libro.libro.titulo}</h5>
             <p className="card-text">{libro.libro.cantidad}</p>
             <p className="card-text">${libro.libro.precio * libro.libro.cantidad}</p>
-            <button className="btn btn-ver-mas" onClick={() => { deleteItem(libro.libro.id) }}>Eliminar</button>
+            <button className="btn btnCart" onClick={() => { deleteItem(libro.libro.id) }}>ELIMINAR</button>
     </div>
     </>
   )

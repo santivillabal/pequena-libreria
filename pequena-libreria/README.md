@@ -18,11 +18,15 @@ Este proyecto hace uso de las siguientes librerías:
 - Font Awesome: https://fontawesome.com/
 
 - Sweet Alert: https://sweetalert.js.org/
+
+
 ## Instalación
 
 El proyecto puede ser descargado desde el repositorio en GitHub:
 
 https://github.com/santivillabal/pequena-libreria
+
+
 ## Deploy
 
 Para publicar este proyecto ejecutar el comando:
@@ -37,6 +41,7 @@ y luego:
   firebase deploy
 ```
 
+
 ## Hoja de ruta
 
 Mejoras previstas para futuras actualizaciones:
@@ -44,6 +49,8 @@ Mejoras previstas para futuras actualizaciones:
 - Agregar modo claro/oscuro
 
 - Integrar con API de Mercadopago
+
+
 ## Contribuciones y soporte
 
 ¡Todos los aportes son bienvenidos!
